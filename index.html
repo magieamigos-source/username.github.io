@@ -1,24 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aesthetic Username Generator</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aesthetic Username Generator ✨</title>
+  <meta name="description" content="Generate cute, aesthetic, gamer, emoji and one-word usernames. Copy, save favorites or download lists. Free, fast, and shareable." />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <main class="wrap">
+    <header class="header">
+      <h1>Aesthetic Username Generator ✨</h1>
+      <p class="tag">Cute • Aesthetic • Gamer • Soft Girl • Dark • Emoji • One-word</p>
+    </header>
 
-    <div class="container">
-        <h1>Aesthetic Username Generator ✨</h1>
-        <p>Click the button to generate a cute / aesthetic username.</p>
+    <section class="controls">
+      <label for="mode">Choose mode</label>
+      <select id="mode" aria-label="Username mode">
+        <option value="aesthetic">Aesthetic</option>
+        <option value="cute">Cute</option>
+        <option value="gamer">Gamer</option>
+        <option value="soft">Soft Girl</option>
+        <option value="dark">Dark Aesthetic</option>
+        <option value="emoji">Emoji</option>
+        <option value="oneword">One-word</option>
+      </select>
 
-        <button onclick="generateUsername()">Generate Username</button>
+      <label for="addNumber" class="inline">
+        <input type="checkbox" id="addNumber" checked> Add number
+      </label>
 
-        <div id="output"></div>
+      <label for="length" class="inline">
+        <span>Number length</span>
+        <input id="length" type="number" min="1" max="4" value="2">
+      </label>
 
-        <p class="small">Copy & use on Instagram, TikTok, Discord, Snapchat, gaming etc!</p>
-    </div>
+      <div class="buttons">
+        <button id="generateBtn" class="primary">Generate</button>
+        <button id="copyBtn">Copy</button>
+        <button id="saveBtn">Save</button>
+        <button id="downloadBtn">Download favorites</button>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <section class="output">
+      <div id="username" class="username">press Generate ✨</div>
+      <div id="info" class="info">Tip: click Copy to copy the username, Save to keep it.</div>
+    </section>
+
+    <section class="favorites">
+      <h2>Favorites</h2>
+      <ul id="favList"></ul>
+      <div id="noFavs" class="muted">No favorites yet — save names you like.</div>
+    </section>
+
+    <footer class="footer">
+      <small>Built with ♥ — host free on GitHub Pages</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
